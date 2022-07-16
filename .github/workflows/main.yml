@@ -1,0 +1,17 @@
+
+name: Mount
+on: workflow_dispatch
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Install dependencies
+      run: |
+        sudo apt update
+        sudo apt install rclone
+        sudo apt install wget
+    - name: Downloading
+      run: |
+        wget https://raw.githubusercontent.com/HeroBenHero/Scripts/main/mount.sh
+        sudo chmod 777 mount.sh
+        sudo bash mount.sh
