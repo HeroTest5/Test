@@ -1,0 +1,17 @@
+name: AutoRclone
+on: workflow_dispatch
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Install dependencies
+      run: |
+        sudo apt update
+        sudo apt install rclone
+        sudo apt install wget
+        sudo apt install pip
+    - name: Downloading
+      run: |
+        wget https://raw.githubusercontent.com/HeroBenHero/Scripts/main/autorclone.sh
+        sudo chmod 777 autorclone.sh
+        sudo bash autorclone.sh
