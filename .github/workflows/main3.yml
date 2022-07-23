@@ -1,4 +1,4 @@
-name: AutoRclone
+name: Sync
 on: workflow_dispatch
 jobs:
   build:
