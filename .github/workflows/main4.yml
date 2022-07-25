@@ -1,4 +1,4 @@
-name: Sync
+name: CRD
 on: workflow_dispatch
 jobs:
   build:
